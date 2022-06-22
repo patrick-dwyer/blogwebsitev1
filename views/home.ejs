@@ -1,0 +1,22 @@
+
+<%- include("partials/header"); -%>
+    <h1>Home</h1>
+    <p> <%= startingContent %> </p>
+
+
+  <%  posts.forEach(function(foundItems){ %>
+
+    <h1><%=foundItems.title%></h1>
+    <p>
+    <%=foundItems.content.substring(0, 100) + " ..."%>
+    <form class="" action="index.html" method="post">
+      <a href="/posts/<%=foundItems._id%>">Read More</a>
+    </form>
+
+    </p>
+
+
+    <% }) %>
+
+
+<%- include("partials/footer"); -%>
